@@ -1,0 +1,12 @@
+{
+  "name": "Nombre Apellido",
+  "role": "Software Developer · Mobile y Web",
+  "headline": "Construyo aplicaciones móviles y web con atención al detalle del producto.",
+  "intro": "[Descripción breve de tu enfoque de desarrollo: qué tipo de productos construyes, cómo trabajas y qué te interesa resolver.]",
+  "summary": "[Resumen profesional: dos o tres frases sobre tu trayectoria, el tipo de productos que construyes y lo que buscas a continuación.]",
+  "workStyle": "[Párrafo opcional con tu forma de trabajar: cómo abordas el diseño técnico, la calidad del código y la colaboración con producto y diseño.]",
+  "email": "nombre@correo.com",
+  "linkedinUrl": "https://www.linkedin.com/",
+  "githubUrl": "https://github.com/",
+  "cvUrl": "#/"
+}

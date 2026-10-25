@@ -1,120 +1,80 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import { useCallback, useEffect, useRef } from 'react'
+import profileData from './data/profile.json'
+import projectsData from './data/projects.json'
+import skillsData from './data/skills.json'
+import type { Profile, SkillGroup } from './interfaces/profile'
+import type { Project } from './interfaces/project'
+import { HOME_HREF, useHashRoute } from './hooks/useHashRoute'
+import { scrollToSection, type SectionId } from './utils/scroll'
+import Navbar from './components/layout/Navbar'
+import About from './components/sections/About'
+import Contact from './components/sections/Contact'
+import Hero from './components/sections/Hero'
+import Projects from './components/sections/Projects'
+import Skills from './components/sections/Skills'
+import ProjectDetail from './components/project/ProjectDetail'
+
+const profile: Profile = profileData
+const projects = projectsData as Project[]
+const skills = skillsData as SkillGroup[]
 
 function App() {
-  const [count, setCount] = useState(0)
+  const route = useHashRoute()
+  const pendingScroll = useRef<SectionId | null>(null)
+
+  const projectIndex =
+    route.view === 'project' ? projects.findIndex((p) => p.id === route.id) : -1
+  const current = projectIndex >= 0 ? projects[projectIndex] : null
+
+  // Ruta de proyecto desconocida: vuelve al inicio.
+  useEffect(() => {
+    if (route.view === 'project' && !current) window.location.hash = HOME_HREF
+  }, [route, current])
+
+  // Tras cambiar de vista: scroll pendiente de la navegación, o arriba al abrir un proyecto.
+  useEffect(() => {
+    const target = pendingScroll.current
+    pendingScroll.current = null
+    if (target) scrollToSection(target)
+    else if (current) window.scrollTo(0, 0)
+  }, [current])
+
+  const navigate = useCallback(
+    (id: SectionId) => {
+      if (current && id !== 'contacto') {
+        pendingScroll.current = id
+        window.location.hash = HOME_HREF
+      } else {
+        scrollToSection(id)
+      }
+    },
+    [current],
+  )
 
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+      <Navbar name={profile.name} activeProjects={!!current} onNavigate={navigate} />
+      <main>
+        {current ? (
+          <ProjectDetail
+            key={current.id}
+            project={current}
+            prev={projects[(projectIndex - 1 + projects.length) % projects.length]}
+            next={projects[(projectIndex + 1) % projects.length]}
+            index={projectIndex}
+            total={projects.length}
+            onBack={() => navigate('proyectos')}
+          />
+        ) : (
+          <>
+            <Hero profile={profile} projects={projects} onNavigate={navigate} />
+            <Projects projects={projects} />
+            <About profile={profile} />
+            <Skills groups={skills} />
+          </>
+        )}
+        <Contact profile={profile} />
+      </main>
     </>
   )
 }

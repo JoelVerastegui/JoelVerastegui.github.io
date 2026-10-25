@@ -1,0 +1,112 @@
+[
+  {
+    "title": "Desarrollo mobile",
+    "items": [
+      {
+        "name": "Flutter",
+        "abbr": "Fl"
+      },
+      {
+        "name": "Dart",
+        "abbr": "Da"
+      },
+      {
+        "name": "Material / Cupertino",
+        "abbr": "Mc"
+      }
+    ]
+  },
+  {
+    "title": "Frontend web",
+    "items": [
+      {
+        "name": "React",
+        "abbr": "Re"
+      },
+      {
+        "name": "TypeScript",
+        "abbr": "Ts"
+      },
+      {
+        "name": "HTML y CSS",
+        "abbr": "Hc"
+      }
+    ]
+  },
+  {
+    "title": "Arquitectura y estado",
+    "items": [
+      {
+        "name": "Clean Architecture",
+        "abbr": "Ca"
+      },
+      {
+        "name": "Riverpod",
+        "abbr": "Rp"
+      },
+      {
+        "name": "Bloc",
+        "abbr": "Bl"
+      },
+      {
+        "name": "Provider",
+        "abbr": "Pv"
+      }
+    ]
+  },
+  {
+    "title": "Persistencia y datos",
+    "items": [
+      {
+        "name": "SQLite",
+        "abbr": "Sq"
+      },
+      {
+        "name": "Hive",
+        "abbr": "Hv"
+      },
+      {
+        "name": "Firestore",
+        "abbr": "Fs"
+      }
+    ]
+  },
+  {
+    "title": "APIs y servicios",
+    "items": [
+      {
+        "name": "REST",
+        "abbr": "Rs"
+      },
+      {
+        "name": "Firebase",
+        "abbr": "Fb"
+      },
+      {
+        "name": "Dio",
+        "abbr": "Di"
+      }
+    ]
+  },
+  {
+    "title": "Herramientas",
+    "items": [
+      {
+        "name": "Git",
+        "abbr": "Gt"
+      },
+      {
+        "name": "GitHub Actions",
+        "abbr": "Ga"
+      },
+      {
+        "name": "Android Studio",
+        "abbr": "As"
+      },
+      {
+        "name": "Figma",
+        "abbr": "Fg"
+      }
+    ]
+  }
+]

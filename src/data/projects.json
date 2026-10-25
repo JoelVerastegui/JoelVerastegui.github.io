@@ -1,0 +1,434 @@
+[
+  {
+    "id": "tempo",
+    "name": "Tempo",
+    "kind": "Hábitos y rutinas",
+    "category": "Mobile",
+    "platform": "iOS · Android",
+    "hue": 155,
+    "layout": "right",
+    "description": "Registro de hábitos diarios con recordatorios, rachas y un resumen semanal del progreso.",
+    "highlights": [
+      "Recordatorios locales programables por hábito",
+      "Funciona sin conexión",
+      "Estadísticas semanales y mensuales"
+    ],
+    "about": [
+      "[Qué es la aplicación] Tempo es una app de demostración para crear hábitos, marcarlos a diario y revisar la constancia en un calendario.",
+      "[Propósito] Reducir la fricción del registro diario: un toque para completar y recordatorios que se adaptan a la rutina de cada persona."
+    ],
+    "features": [
+      "Crear hábitos con frecuencia personalizada",
+      "Completar el día con un toque",
+      "Rachas y calendario mensual",
+      "Recordatorios por hábito",
+      "Tema claro y oscuro"
+    ],
+    "technical": [
+      {
+        "label": "Arquitectura",
+        "value": "Capas por funcionalidad: datos, dominio y presentación"
+      },
+      {
+        "label": "Estado",
+        "value": "Riverpod con providers asíncronos"
+      },
+      {
+        "label": "Persistencia",
+        "value": "Hive como almacenamiento local"
+      },
+      {
+        "label": "Notificaciones",
+        "value": "Programación local por zona horaria"
+      },
+      {
+        "label": "Pruebas",
+        "value": "Tests unitarios de casos de uso"
+      }
+    ],
+    "stack": [
+      {
+        "name": "Flutter",
+        "abbr": "Fl",
+        "group": "Base",
+        "main": true
+      },
+      {
+        "name": "Dart",
+        "abbr": "Da",
+        "group": "Base",
+        "main": true
+      },
+      {
+        "name": "Riverpod",
+        "abbr": "Rp",
+        "group": "Estado y arquitectura"
+      },
+      {
+        "name": "Hive",
+        "abbr": "Hv",
+        "group": "Datos"
+      },
+      {
+        "name": "Local Notifications",
+        "abbr": "Ln",
+        "group": "Servicios"
+      }
+    ],
+    "screenshots": [
+      {
+        "label": "Bienvenida"
+      },
+      {
+        "label": "Inicio"
+      },
+      {
+        "label": "Nuevo hábito"
+      },
+      {
+        "label": "Detalle del hábito"
+      },
+      {
+        "label": "Calendario"
+      },
+      {
+        "label": "Estadísticas"
+      },
+      {
+        "label": "Recordatorios"
+      },
+      {
+        "label": "Ajustes"
+      },
+      {
+        "label": "Perfil"
+      }
+    ],
+    "previewIndexes": [
+      2,
+      1,
+      5
+    ],
+    "videoUrl": "https://www.youtube.com/",
+    "githubUrl": "https://github.com/"
+  },
+  {
+    "id": "cuenta",
+    "name": "Cuenta",
+    "kind": "Finanzas personales",
+    "category": "Mobile",
+    "platform": "iOS · Android",
+    "hue": 250,
+    "layout": "left",
+    "description": "Control de gastos e ingresos con categorías, presupuestos mensuales e informes visuales.",
+    "highlights": [
+      "Autenticación con correo y Google",
+      "Sincronización en la nube con caché offline",
+      "Gráficos de gasto por categoría"
+    ],
+    "about": [
+      "[Qué es la aplicación] Cuenta es una app de demostración para registrar movimientos y entender en qué se va el dinero cada mes.",
+      "[Propósito] Ofrecer una visión clara del presupuesto sin hojas de cálculo, con informes que se leen de un vistazo."
+    ],
+    "features": [
+      "Registro rápido de gastos e ingresos",
+      "Categorías personalizables",
+      "Presupuestos mensuales con avisos",
+      "Informes por periodo",
+      "Exportación de movimientos"
+    ],
+    "technical": [
+      {
+        "label": "Autenticación",
+        "value": "Firebase Auth con correo y Google"
+      },
+      {
+        "label": "Estado",
+        "value": "Bloc con eventos y estados inmutables"
+      },
+      {
+        "label": "Persistencia",
+        "value": "Cloud Firestore con caché offline"
+      },
+      {
+        "label": "Visualización",
+        "value": "Gráficos con fl_chart"
+      },
+      {
+        "label": "Arquitectura",
+        "value": "Clean Architecture con repositorios"
+      }
+    ],
+    "stack": [
+      {
+        "name": "Flutter",
+        "abbr": "Fl",
+        "group": "Base",
+        "main": true
+      },
+      {
+        "name": "Dart",
+        "abbr": "Da",
+        "group": "Base",
+        "main": true
+      },
+      {
+        "name": "Bloc",
+        "abbr": "Bl",
+        "group": "Estado y arquitectura"
+      },
+      {
+        "name": "Firebase Auth",
+        "abbr": "Fa",
+        "group": "Servicios"
+      },
+      {
+        "name": "Cloud Firestore",
+        "abbr": "Fs",
+        "group": "Datos"
+      },
+      {
+        "name": "fl_chart",
+        "abbr": "Ch",
+        "group": "Interfaz"
+      }
+    ],
+    "screenshots": [
+      {
+        "label": "Inicio de sesión"
+      },
+      {
+        "label": "Resumen"
+      },
+      {
+        "label": "Movimientos"
+      },
+      {
+        "label": "Nuevo gasto"
+      },
+      {
+        "label": "Categorías"
+      },
+      {
+        "label": "Presupuestos"
+      },
+      {
+        "label": "Informes"
+      },
+      {
+        "label": "Ajustes"
+      }
+    ],
+    "previewIndexes": [
+      2,
+      1,
+      6
+    ],
+    "videoUrl": "https://www.youtube.com/"
+  },
+  {
+    "id": "mesa",
+    "name": "Mesa",
+    "kind": "Recetas y planificación",
+    "category": "Mobile",
+    "platform": "Android",
+    "hue": 40,
+    "layout": "wide",
+    "description": "Búsqueda de recetas, planificador semanal de comidas y lista de la compra generada automáticamente.",
+    "highlights": [
+      "Consumo de API REST con paginación",
+      "Caché local de recetas favoritas",
+      "Deep links a recetas concretas"
+    ],
+    "about": [
+      "[Qué es la aplicación] Mesa es una app de demostración que une búsqueda de recetas, planificación semanal y lista de la compra.",
+      "[Propósito] Pasar de “qué cocino” a una lista de ingredientes lista para usar en pocos pasos."
+    ],
+    "features": [
+      "Búsqueda con filtros por ingrediente",
+      "Modo paso a paso al cocinar",
+      "Favoritos disponibles sin conexión",
+      "Planificador semanal",
+      "Lista de la compra automática"
+    ],
+    "technical": [
+      {
+        "label": "APIs",
+        "value": "REST con Dio, reintentos y manejo de errores"
+      },
+      {
+        "label": "Persistencia",
+        "value": "SQLite (sqflite) como caché"
+      },
+      {
+        "label": "Navegación",
+        "value": "go_router con deep links"
+      },
+      {
+        "label": "Estado",
+        "value": "Provider con ChangeNotifier"
+      },
+      {
+        "label": "Rendimiento",
+        "value": "Paginación infinita e imágenes en caché"
+      }
+    ],
+    "stack": [
+      {
+        "name": "Flutter",
+        "abbr": "Fl",
+        "group": "Base",
+        "main": true
+      },
+      {
+        "name": "Dart",
+        "abbr": "Da",
+        "group": "Base",
+        "main": true
+      },
+      {
+        "name": "Provider",
+        "abbr": "Pv",
+        "group": "Estado y arquitectura"
+      },
+      {
+        "name": "Dio",
+        "abbr": "Di",
+        "group": "APIs"
+      },
+      {
+        "name": "sqflite",
+        "abbr": "Sq",
+        "group": "Datos"
+      },
+      {
+        "name": "go_router",
+        "abbr": "Gr",
+        "group": "Navegación"
+      }
+    ],
+    "screenshots": [
+      {
+        "label": "Inicio"
+      },
+      {
+        "label": "Buscar"
+      },
+      {
+        "label": "Resultados"
+      },
+      {
+        "label": "Receta"
+      },
+      {
+        "label": "Paso a paso"
+      },
+      {
+        "label": "Favoritos"
+      },
+      {
+        "label": "Planificador"
+      },
+      {
+        "label": "Lista de compra"
+      },
+      {
+        "label": "Perfil"
+      }
+    ],
+    "previewIndexes": [
+      0,
+      3,
+      6
+    ],
+    "videoUrl": "https://www.youtube.com/",
+    "githubUrl": "https://github.com/"
+  },
+  {
+    "id": "panel",
+    "name": "Panel",
+    "kind": "Ejemplo · Proyecto web futuro",
+    "category": "Web",
+    "platform": "Navegador",
+    "hue": 200,
+    "layout": "web",
+    "description": "Ejemplo de cómo se presentaría un proyecto web con React dentro del mismo sistema visual.",
+    "highlights": [
+      "Capturas horizontales en marco de navegador",
+      "Mismo bloque de texto y metadatos",
+      "Sin video: el botón desaparece"
+    ],
+    "about": [
+      "[Qué es el proyecto] Bloque de ejemplo que muestra la escalabilidad del portafolio hacia proyectos web.",
+      "[Propósito] Validar que la plantilla admite capturas horizontales, otro stack y la ausencia de video sin cambios estructurales."
+    ],
+    "features": [
+      "[Funcionalidad de ejemplo 1]",
+      "[Funcionalidad de ejemplo 2]",
+      "[Funcionalidad de ejemplo 3]"
+    ],
+    "technical": [
+      {
+        "label": "Frontend",
+        "value": "[React con TypeScript]"
+      },
+      {
+        "label": "Datos",
+        "value": "[Gestión de datos remotos]"
+      },
+      {
+        "label": "Build",
+        "value": "[Herramienta de build]"
+      }
+    ],
+    "stack": [
+      {
+        "name": "React",
+        "abbr": "Re",
+        "group": "Base",
+        "main": true
+      },
+      {
+        "name": "TypeScript",
+        "abbr": "Ts",
+        "group": "Base",
+        "main": true
+      },
+      {
+        "name": "Vite",
+        "abbr": "Vi",
+        "group": "Herramientas"
+      },
+      {
+        "name": "TanStack Query",
+        "abbr": "Tq",
+        "group": "Datos"
+      }
+    ],
+    "screenshots": [
+      {
+        "label": "Dashboard"
+      },
+      {
+        "label": "Listado"
+      },
+      {
+        "label": "Detalle"
+      },
+      {
+        "label": "Formulario"
+      },
+      {
+        "label": "Ajustes"
+      },
+      {
+        "label": "Inicio de sesión"
+      }
+    ],
+    "previewIndexes": [
+      0
+    ],
+    "githubUrl": "https://github.com/",
+    "url": "panel-demo.app"
+  }
+]
