@@ -9,6 +9,7 @@ my-portfolio-v2/
 ├── src/
 │   ├── assets/             # Iconos, imágenes y estilos globales
 │   │   ├── face.png        # Foto de perfil (Hero)
+│   │   ├── icons/          # Íconos de las apps (WebP, referenciados desde el JSON con `icon`)
 │   │   └── projects/       # Imágenes de los proyectos (referenciadas desde el JSON)
 │   ├── components/         # Todos los componentes de la aplicación
 │   │   ├── ui/             # Elementos base (Button, TechChip, PhoneFrame, BrowserFrame, Shot, MediaPanel)

@@ -19,7 +19,7 @@ interface Props {
 }
 
 function Neighbor({ project, dir }: { project: Project; dir: 'prev' | 'next' }) {
-  const icon = <ProjectIcon name={project.name} hue={project.hue} size={44} radius={12} fontSize={18} />
+  const icon = <ProjectIcon name={project.name} hue={project.hue} icon={project.icon} size={44} radius={12} fontSize={18} />
   return (
     <a className={`neighbor neighbor--${dir}`} href={projectHref(project.id)}>
       {dir === 'prev' && <span className="neighbor__arrow">←</span>}
@@ -72,7 +72,7 @@ export default function ProjectDetail({ project: p, prev, next, index, total, on
             <span>{p.platform}</span>
           </div>
           <div className="detail__title">
-            <ProjectIcon name={p.name} hue={p.hue} size={88} radius={22} fontSize={34} />
+            <ProjectIcon name={p.name} hue={p.hue} icon={p.icon} size={88} radius={22} fontSize={34} />
             <div className="project-block__names">
               <h1 className="display-1d">{p.name}</h1>
               <span className="text-2 detail__kind">{p.kind}</span>

@@ -372,6 +372,11 @@ button {
   font-family: var(--font-display);
   font-weight: 700;
 }
+.project-icon--img {
+  display: block;
+  object-fit: cover;
+  background: none;
+}
 .card {
   background: var(--g800);
   border: 1px solid var(--line);
@@ -752,17 +757,6 @@ button {
   font-size: 12px;
   font-weight: 500;
   color: var(--t3);
-}
-.hero__index-icon {
-  width: 32px;
-  height: 32px;
-  flex: none;
-  border-radius: 9px;
-  display: grid;
-  place-items: center;
-  background: var(--icon);
-  color: oklch(0.18 0.02 260);
-  font: 700 14px var(--font-display);
 }
 .hero__index-text {
   display: flex;

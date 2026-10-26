@@ -24,7 +24,7 @@ export default function ProjectBlock({ project: p, num, total }: Props) {
             <span>{p.platform}</span>
           </div>
           <div className="project-block__title">
-            <ProjectIcon name={p.name} hue={p.hue} size={60} radius={16} fontSize={26} />
+            <ProjectIcon name={p.name} hue={p.hue} icon={p.icon} size={60} radius={16} fontSize={26} />
             <div className="project-block__names">
               <h3 className="display-3">{p.name}</h3>
               <span className="text-2">{p.kind}</span>

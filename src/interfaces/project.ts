@@ -33,6 +33,8 @@ export interface Project {
   platform: string
   /** Tono OKLCH que tiñe el panel de capturas y el icono del proyecto. */
   hue: number
+  /** Nombre de archivo dentro de src/assets/icons/. Sin él se muestra la inicial del proyecto. */
+  icon?: string
   layout: ProjectLayout
   description: string
   highlights: string[]

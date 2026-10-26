@@ -6,6 +6,7 @@
     "category": "Mobile",
     "platform": "Android",
     "hue": 155,
+    "icon": "ponte_al_dia_icon.webp",
     "layout": "right",
     "description": "Agenda escolar que centraliza cursos, horarios y tareas, priorizadas según su fecha de entrega.",
     "highlights": [
@@ -110,6 +111,7 @@
     "category": "Mobile",
     "platform": "Android",
     "hue": 250,
+    "icon": "teslo_shop_icon.webp",
     "layout": "left",
     "description": "Gestor de productos de una tienda de ropa con autenticación JWT y carga de imágenes desde cámara o galería.",
     "highlights": [
@@ -223,6 +225,7 @@
     "category": "Mobile",
     "platform": "Android",
     "hue": 40,
+    "icon": "cinemapedia_icon.webp",
     "layout": "wide",
     "description": "Galería de películas con cartelera, búsqueda, puntuaciones y una colección de las favoritas.",
     "highlights": [

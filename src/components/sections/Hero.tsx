@@ -4,6 +4,7 @@ import { projectHref } from '../../hooks/useHashRoute'
 import { hueStyle } from '../../utils/hue'
 import { pad2 } from '../../utils/format'
 import Button from '../ui/Button'
+import ProjectIcon from '../ui/ProjectIcon'
 import face from '../../assets/face.png'
 
 interface Props {
@@ -48,7 +49,7 @@ export default function Hero({ profile, projects, onNavigate }: Props) {
         {projects.map((p, i) => (
           <a key={p.id} className="hero__index-item hue" style={hueStyle(p.hue)} href={projectHref(p.id)}>
             <span className="hero__index-num">{pad2(i + 1)}</span>
-            <span className="hero__index-icon">{p.name[0]}</span>
+            <ProjectIcon name={p.name} hue={p.hue} icon={p.icon} size={32} radius={9} fontSize={14} />
             <span className="hero__index-text">
               <span className="hero__index-name">{p.name}</span>
               <span className="hero__index-meta">
