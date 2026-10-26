@@ -1,12 +1,11 @@
 {
-  "name": "Nombre Apellido",
-  "role": "Software Developer · Mobile y Web",
+  "name": "Joel Verástegui",
+  "role": "Software Developer · Mobile & Web",
   "headline": "Construyo aplicaciones móviles y web con atención al detalle del producto.",
-  "intro": "[Descripción breve de tu enfoque de desarrollo: qué tipo de productos construyes, cómo trabajas y qué te interesa resolver.]",
-  "summary": "[Resumen profesional: dos o tres frases sobre tu trayectoria, el tipo de productos que construyes y lo que buscas a continuación.]",
-  "workStyle": "[Párrafo opcional con tu forma de trabajar: cómo abordas el diseño técnico, la calidad del código y la colaboración con producto y diseño.]",
-  "email": "nombre@correo.com",
-  "linkedinUrl": "https://www.linkedin.com/",
-  "githubUrl": "https://github.com/",
-  "cvUrl": "#/"
+  "intro": "Diseño soluciones escalables y bien estructuradas, con código limpio bajo MVVM y Clean Architecture.",
+  "summary": "Desarrollador de software con más de 4 años de experiencia en soluciones móviles y web escalables, con foco en arquitectura de datos, flujos de trabajo y documentación técnica clara.",
+  "workStyle": "Trabajo con Scrum y Kanban, maqueto interfaces centradas en la experiencia de usuario e incorporo herramientas de IA para acelerar el desarrollo. Español nativo e inglés intermedio.",
+  "email": "jverasteguixyz@gmail.com",
+  "linkedinUrl": "https://www.linkedin.com/in/joelverastegui",
+  "githubUrl": "https://github.com/JoelVerastegui"
 }

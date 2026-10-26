@@ -1,112 +1,62 @@
 [
   {
-    "title": "Desarrollo mobile",
+    "title": "Lenguajes",
     "items": [
-      {
-        "name": "Flutter",
-        "abbr": "Fl"
-      },
-      {
-        "name": "Dart",
-        "abbr": "Da"
-      },
-      {
-        "name": "Material / Cupertino",
-        "abbr": "Mc"
-      }
+      { "name": "Dart", "abbr": "Da" },
+      { "name": "TypeScript", "abbr": "Ts" },
+      { "name": "JavaScript", "abbr": "Js" },
+      { "name": "C#", "abbr": "C#" },
+      { "name": "SQL", "abbr": "Sq" },
+      { "name": "Power Fx", "abbr": "Pf" }
     ]
   },
   {
-    "title": "Frontend web",
+    "title": "Frontend y mobile",
     "items": [
-      {
-        "name": "React",
-        "abbr": "Re"
-      },
-      {
-        "name": "TypeScript",
-        "abbr": "Ts"
-      },
-      {
-        "name": "HTML y CSS",
-        "abbr": "Hc"
-      }
+      { "name": "Flutter", "abbr": "Fl" },
+      { "name": "React", "abbr": "Re" },
+      { "name": "HTML5 y CSS3", "abbr": "Hc" },
+      { "name": "Bootstrap 5", "abbr": "Bs" },
+      { "name": "Razor Pages", "abbr": "Rz" }
     ]
   },
   {
-    "title": "Arquitectura y estado",
+    "title": "Web y DevOps",
     "items": [
-      {
-        "name": "Clean Architecture",
-        "abbr": "Ca"
-      },
-      {
-        "name": "Riverpod",
-        "abbr": "Rp"
-      },
-      {
-        "name": "Bloc",
-        "abbr": "Bl"
-      },
-      {
-        "name": "Provider",
-        "abbr": "Pv"
-      }
+      { "name": ".NET MVC", "abbr": "Nm" },
+      { "name": "APIs REST", "abbr": "Rs" },
+      { "name": "Git y GitHub", "abbr": "Gt" },
+      { "name": "GitHub Actions", "abbr": "Ga" },
+      { "name": "Azure DevOps", "abbr": "Ad" },
+      { "name": "Docker", "abbr": "Dk" },
+      { "name": "IIS", "abbr": "Ii" }
     ]
   },
   {
-    "title": "Persistencia y datos",
+    "title": "Cloud y plataformas",
     "items": [
-      {
-        "name": "SQLite",
-        "abbr": "Sq"
-      },
-      {
-        "name": "Hive",
-        "abbr": "Hv"
-      },
-      {
-        "name": "Firestore",
-        "abbr": "Fs"
-      }
+      { "name": "Azure", "abbr": "Az" },
+      { "name": "AWS", "abbr": "Aw" },
+      { "name": "Power Platform", "abbr": "Pp" }
     ]
   },
   {
-    "title": "APIs y servicios",
+    "title": "Bases de datos",
     "items": [
-      {
-        "name": "REST",
-        "abbr": "Rs"
-      },
-      {
-        "name": "Firebase",
-        "abbr": "Fb"
-      },
-      {
-        "name": "Dio",
-        "abbr": "Di"
-      }
+      { "name": "SQL Server", "abbr": "Ss" },
+      { "name": "MySQL", "abbr": "My" },
+      { "name": "SQLite (Drift)", "abbr": "Sl" },
+      { "name": "CosmosDB", "abbr": "Cd" },
+      { "name": "SharePoint", "abbr": "Sp" }
     ]
   },
   {
-    "title": "Herramientas",
+    "title": "IA y agentes",
     "items": [
-      {
-        "name": "Git",
-        "abbr": "Gt"
-      },
-      {
-        "name": "GitHub Actions",
-        "abbr": "Ga"
-      },
-      {
-        "name": "Android Studio",
-        "abbr": "As"
-      },
-      {
-        "name": "Figma",
-        "abbr": "Fg"
-      }
+      { "name": "Claude Code", "abbr": "Cc" },
+      { "name": "GitHub Copilot", "abbr": "Cp" },
+      { "name": "ChatGPT", "abbr": "Cg" },
+      { "name": "Gemini", "abbr": "Ge" }
     ]
   }
 ]

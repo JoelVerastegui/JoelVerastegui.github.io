@@ -1,49 +1,48 @@
 [
   {
-    "id": "tempo",
-    "name": "Tempo",
-    "kind": "Hábitos y rutinas",
+    "id": "ponte-al-dia",
+    "name": "Ponte al Día",
+    "kind": "Agenda escolar",
     "category": "Mobile",
-    "platform": "iOS · Android",
+    "platform": "Android",
     "hue": 155,
     "layout": "right",
-    "description": "Registro de hábitos diarios con recordatorios, rachas y un resumen semanal del progreso.",
+    "description": "Agenda escolar que centraliza cursos, horarios y tareas, priorizadas según su fecha de entrega.",
     "highlights": [
-      "Recordatorios locales programables por hábito",
-      "Funciona sin conexión",
-      "Estadísticas semanales y mensuales"
+      "Funciona sin conexión con datos locales",
+      "Tema, colores y notificaciones personalizables",
+      "Publicada en Google Play Store"
     ],
     "about": [
-      "[Qué es la aplicación] Tempo es una app de demostración para crear hábitos, marcarlos a diario y revisar la constancia en un calendario.",
-      "[Propósito] Reducir la fricción del registro diario: un toque para completar y recordatorios que se adaptan a la rutina de cada persona."
+      "Aplicación móvil independiente que reúne cursos, horarios y tareas en un solo lugar para organizar y priorizar actividades según su fecha de entrega.",
+      "Diseñada en Figma y desarrollada con Flutter, con una estructura mantenible y escalable."
     ],
     "features": [
-      "Crear hábitos con frecuencia personalizada",
-      "Completar el día con un toque",
-      "Rachas y calendario mensual",
-      "Recordatorios por hábito",
-      "Tema claro y oscuro"
+      "Cursos, horarios y tareas centralizados",
+      "Priorización por fecha de entrega",
+      "Personalización de tema y colores",
+      "Notificaciones ajustables"
     ],
     "technical": [
       {
         "label": "Arquitectura",
-        "value": "Capas por funcionalidad: datos, dominio y presentación"
+        "value": "Clean Architecture"
       },
       {
         "label": "Estado",
-        "value": "Riverpod con providers asíncronos"
+        "value": "Riverpod"
       },
       {
         "label": "Persistencia",
-        "value": "Hive como almacenamiento local"
+        "value": "Isar como almacenamiento local"
       },
       {
         "label": "Notificaciones",
-        "value": "Programación local por zona horaria"
+        "value": "Firebase Cloud Messaging"
       },
       {
-        "label": "Pruebas",
-        "value": "Tests unitarios de casos de uso"
+        "label": "Navegación",
+        "value": "go_router"
       }
     ],
     "stack": [
@@ -65,212 +64,93 @@
         "group": "Estado y arquitectura"
       },
       {
-        "name": "Hive",
-        "abbr": "Hv",
+        "name": "Isar",
+        "abbr": "Is",
         "group": "Datos"
       },
       {
-        "name": "Local Notifications",
-        "abbr": "Ln",
+        "name": "Firebase Cloud Messaging",
+        "abbr": "Fm",
         "group": "Servicios"
+      },
+      {
+        "name": "go_router",
+        "abbr": "Gr",
+        "group": "Navegación"
+      },
+      {
+        "name": "Git",
+        "abbr": "Gt",
+        "group": "Herramientas"
+      },
+      {
+        "name": "GitHub",
+        "abbr": "Gh",
+        "group": "Herramientas"
       }
     ],
     "screenshots": [
-      {
-        "label": "Bienvenida"
-      },
-      {
-        "label": "Inicio"
-      },
-      {
-        "label": "Nuevo hábito"
-      },
-      {
-        "label": "Detalle del hábito"
-      },
-      {
-        "label": "Calendario"
-      },
-      {
-        "label": "Estadísticas"
-      },
-      {
-        "label": "Recordatorios"
-      },
-      {
-        "label": "Ajustes"
-      },
-      {
-        "label": "Perfil"
-      }
+      { "label": "" },
+      { "label": "" },
+      { "label": "" },
+      { "label": "" },
+      { "label": "" },
+      { "label": "" },
+      { "label": "" },
+      { "label": "" }
     ],
-    "previewIndexes": [
-      2,
-      1,
-      5
-    ],
-    "videoUrl": "https://www.youtube.com/",
-    "githubUrl": "https://github.com/"
+    "previewIndexes": [0, 1, 2],
+    "videoUrl": "https://www.youtube.com/watch?v=DdlO9qLc9n0",
+    "githubUrl": ""
   },
   {
-    "id": "cuenta",
-    "name": "Cuenta",
-    "kind": "Finanzas personales",
+    "id": "teslo-shop",
+    "name": "Teslo Shop",
+    "kind": "Gestión de tienda de ropa",
     "category": "Mobile",
-    "platform": "iOS · Android",
+    "platform": "Android",
     "hue": 250,
     "layout": "left",
-    "description": "Control de gastos e ingresos con categorías, presupuestos mensuales e informes visuales.",
+    "description": "Gestor de productos de una tienda de ropa con autenticación JWT y carga de imágenes desde cámara o galería.",
     "highlights": [
-      "Autenticación con correo y Google",
-      "Sincronización en la nube con caché offline",
-      "Gráficos de gasto por categoría"
+      "Login y registro con JWT",
+      "Rutas protegidas según la sesión",
+      "Backend propio con Docker y MySQL"
     ],
     "about": [
-      "[Qué es la aplicación] Cuenta es una app de demostración para registrar movimientos y entender en qué se va el dinero cada mes.",
-      "[Propósito] Ofrecer una visión clara del presupuesto sin hojas de cálculo, con informes que se leen de un vistazo."
+      "Aplicación para gestionar los productos de una tienda de ropa: listar, registrar y editar, con imágenes tomadas desde la cámara o la galería.",
+      "Se integra con un backend propio ejecutado en Docker con base de datos MySQL."
     ],
     "features": [
-      "Registro rápido de gastos e ingresos",
-      "Categorías personalizables",
-      "Presupuestos mensuales con avisos",
-      "Informes por periodo",
-      "Exportación de movimientos"
+      "Registro e inicio de sesión de usuarios",
+      "Listado, creación y edición de productos",
+      "Carga de imágenes desde cámara o galería",
+      "Acceso restringido según el estado de la sesión"
     ],
     "technical": [
       {
         "label": "Autenticación",
-        "value": "Firebase Auth con correo y Google"
-      },
-      {
-        "label": "Estado",
-        "value": "Bloc con eventos y estados inmutables"
-      },
-      {
-        "label": "Persistencia",
-        "value": "Cloud Firestore con caché offline"
-      },
-      {
-        "label": "Visualización",
-        "value": "Gráficos con fl_chart"
-      },
-      {
-        "label": "Arquitectura",
-        "value": "Clean Architecture con repositorios"
-      }
-    ],
-    "stack": [
-      {
-        "name": "Flutter",
-        "abbr": "Fl",
-        "group": "Base",
-        "main": true
-      },
-      {
-        "name": "Dart",
-        "abbr": "Da",
-        "group": "Base",
-        "main": true
-      },
-      {
-        "name": "Bloc",
-        "abbr": "Bl",
-        "group": "Estado y arquitectura"
-      },
-      {
-        "name": "Firebase Auth",
-        "abbr": "Fa",
-        "group": "Servicios"
-      },
-      {
-        "name": "Cloud Firestore",
-        "abbr": "Fs",
-        "group": "Datos"
-      },
-      {
-        "name": "fl_chart",
-        "abbr": "Ch",
-        "group": "Interfaz"
-      }
-    ],
-    "screenshots": [
-      {
-        "label": "Inicio de sesión"
-      },
-      {
-        "label": "Resumen"
-      },
-      {
-        "label": "Movimientos"
-      },
-      {
-        "label": "Nuevo gasto"
-      },
-      {
-        "label": "Categorías"
-      },
-      {
-        "label": "Presupuestos"
-      },
-      {
-        "label": "Informes"
-      },
-      {
-        "label": "Ajustes"
-      }
-    ],
-    "previewIndexes": [
-      2,
-      1,
-      6
-    ],
-    "videoUrl": "https://www.youtube.com/"
-  },
-  {
-    "id": "mesa",
-    "name": "Mesa",
-    "kind": "Recetas y planificación",
-    "category": "Mobile",
-    "platform": "Android",
-    "hue": 40,
-    "layout": "wide",
-    "description": "Búsqueda de recetas, planificador semanal de comidas y lista de la compra generada automáticamente.",
-    "highlights": [
-      "Consumo de API REST con paginación",
-      "Caché local de recetas favoritas",
-      "Deep links a recetas concretas"
-    ],
-    "about": [
-      "[Qué es la aplicación] Mesa es una app de demostración que une búsqueda de recetas, planificación semanal y lista de la compra.",
-      "[Propósito] Pasar de “qué cocino” a una lista de ingredientes lista para usar en pocos pasos."
-    ],
-    "features": [
-      "Búsqueda con filtros por ingrediente",
-      "Modo paso a paso al cocinar",
-      "Favoritos disponibles sin conexión",
-      "Planificador semanal",
-      "Lista de la compra automática"
-    ],
-    "technical": [
-      {
-        "label": "APIs",
-        "value": "REST con Dio, reintentos y manejo de errores"
-      },
-      {
-        "label": "Persistencia",
-        "value": "SQLite (sqflite) como caché"
+        "value": "JWT con validación del token en el backend"
       },
       {
         "label": "Navegación",
-        "value": "go_router con deep links"
+        "value": "go_router con protección de rutas"
       },
       {
         "label": "Estado",
-        "value": "Provider con ChangeNotifier"
+        "value": "Riverpod y Formz para formularios"
       },
       {
-        "label": "Rendimiento",
-        "value": "Paginación infinita e imágenes en caché"
+        "label": "APIs",
+        "value": "REST con Dio"
+      },
+      {
+        "label": "Backend",
+        "value": "Docker con MySQL"
+      },
+      {
+        "label": "Permisos",
+        "value": "Cámara y galería con control de estados"
       }
     ],
     "stack": [
@@ -287,8 +167,13 @@
         "main": true
       },
       {
-        "name": "Provider",
-        "abbr": "Pv",
+        "name": "Riverpod",
+        "abbr": "Rp",
+        "group": "Estado y arquitectura"
+      },
+      {
+        "name": "Formz",
+        "abbr": "Fz",
         "group": "Estado y arquitectura"
       },
       {
@@ -297,9 +182,119 @@
         "group": "APIs"
       },
       {
-        "name": "sqflite",
-        "abbr": "Sq",
+        "name": "JWT",
+        "abbr": "Jw",
+        "group": "Servicios"
+      },
+      {
+        "name": "go_router",
+        "abbr": "Gr",
+        "group": "Navegación"
+      },
+      {
+        "name": "Docker",
+        "abbr": "Dk",
+        "group": "Herramientas"
+      },
+      {
+        "name": "MySQL",
+        "abbr": "My",
         "group": "Datos"
+      }
+    ],
+    "screenshots": [
+      { "label": "" },
+      { "label": "" },
+      { "label": "" },
+      { "label": "" },
+      { "label": "" },
+      { "label": "" },
+      { "label": "" },
+      { "label": "" }
+    ],
+    "previewIndexes": [0, 1, 2],
+    "videoUrl": "https://www.youtube.com/watch?v=Ktyg9u2cTjM",
+    "githubUrl": "https://github.com/JoelVerastegui/teslo_app/tree/master"
+  },
+  {
+    "id": "cinemapedia",
+    "name": "Cinemapedia",
+    "kind": "Exploración de películas",
+    "category": "Mobile",
+    "platform": "Android",
+    "hue": 40,
+    "layout": "wide",
+    "description": "Galería de películas con cartelera, búsqueda, puntuaciones y una colección de las favoritas.",
+    "highlights": [
+      "Datos actualizados desde la API de TMDB",
+      "Favoritos y caché locales",
+      "Trailers con reproductor de YouTube"
+    ],
+    "about": [
+      "Aplicación para explorar la cartelera actual, buscar títulos, consultar puntuaciones y guardar películas favoritas en una colección personalizada.",
+      "Interfaz adaptativa con animaciones y soporte para tema claro y oscuro."
+    ],
+    "features": [
+      "Cartelera actual por secciones",
+      "Búsqueda de películas por nombre",
+      "Colección de películas favoritas",
+      "Trailers dentro de la app",
+      "Tema claro y oscuro"
+    ],
+    "technical": [
+      {
+        "label": "APIs",
+        "value": "The Movie Database (TMDB)"
+      },
+      {
+        "label": "Estado",
+        "value": "Riverpod"
+      },
+      {
+        "label": "Persistencia",
+        "value": "Drift para favoritos y caché"
+      },
+      {
+        "label": "Navegación",
+        "value": "go_router"
+      },
+      {
+        "label": "Multimedia",
+        "value": "Reproductor de YouTube"
+      }
+    ],
+    "stack": [
+      {
+        "name": "Flutter",
+        "abbr": "Fl",
+        "group": "Base",
+        "main": true
+      },
+      {
+        "name": "Dart",
+        "abbr": "Da",
+        "group": "Base",
+        "main": true
+      },
+      {
+        "name": "Riverpod",
+        "abbr": "Rp",
+        "group": "Estado y arquitectura"
+      },
+      {
+        "name": "TMDB API",
+        "abbr": "Tm",
+        "group": "APIs"
+      },
+      {
+        "name": "Drift",
+        "abbr": "Dr",
+        "group": "Datos"
+      },
+      {
+        "name": "YouTube Player",
+        "abbr": "Yt",
+        "group": "Servicios"
       },
       {
         "name": "go_router",
@@ -308,127 +303,18 @@
       }
     ],
     "screenshots": [
-      {
-        "label": "Inicio"
-      },
-      {
-        "label": "Buscar"
-      },
-      {
-        "label": "Resultados"
-      },
-      {
-        "label": "Receta"
-      },
-      {
-        "label": "Paso a paso"
-      },
-      {
-        "label": "Favoritos"
-      },
-      {
-        "label": "Planificador"
-      },
-      {
-        "label": "Lista de compra"
-      },
-      {
-        "label": "Perfil"
-      }
+      { "label": "" },
+      { "label": "" },
+      { "label": "" },
+      { "label": "" },
+      { "label": "" },
+      { "label": "" },
+      { "label": "" },
+      { "label": "" },
+      { "label": "" }
     ],
-    "previewIndexes": [
-      0,
-      3,
-      6
-    ],
-    "videoUrl": "https://www.youtube.com/",
-    "githubUrl": "https://github.com/"
-  },
-  {
-    "id": "panel",
-    "name": "Panel",
-    "kind": "Ejemplo · Proyecto web futuro",
-    "category": "Web",
-    "platform": "Navegador",
-    "hue": 200,
-    "layout": "web",
-    "description": "Ejemplo de cómo se presentaría un proyecto web con React dentro del mismo sistema visual.",
-    "highlights": [
-      "Capturas horizontales en marco de navegador",
-      "Mismo bloque de texto y metadatos",
-      "Sin video: el botón desaparece"
-    ],
-    "about": [
-      "[Qué es el proyecto] Bloque de ejemplo que muestra la escalabilidad del portafolio hacia proyectos web.",
-      "[Propósito] Validar que la plantilla admite capturas horizontales, otro stack y la ausencia de video sin cambios estructurales."
-    ],
-    "features": [
-      "[Funcionalidad de ejemplo 1]",
-      "[Funcionalidad de ejemplo 2]",
-      "[Funcionalidad de ejemplo 3]"
-    ],
-    "technical": [
-      {
-        "label": "Frontend",
-        "value": "[React con TypeScript]"
-      },
-      {
-        "label": "Datos",
-        "value": "[Gestión de datos remotos]"
-      },
-      {
-        "label": "Build",
-        "value": "[Herramienta de build]"
-      }
-    ],
-    "stack": [
-      {
-        "name": "React",
-        "abbr": "Re",
-        "group": "Base",
-        "main": true
-      },
-      {
-        "name": "TypeScript",
-        "abbr": "Ts",
-        "group": "Base",
-        "main": true
-      },
-      {
-        "name": "Vite",
-        "abbr": "Vi",
-        "group": "Herramientas"
-      },
-      {
-        "name": "TanStack Query",
-        "abbr": "Tq",
-        "group": "Datos"
-      }
-    ],
-    "screenshots": [
-      {
-        "label": "Dashboard"
-      },
-      {
-        "label": "Listado"
-      },
-      {
-        "label": "Detalle"
-      },
-      {
-        "label": "Formulario"
-      },
-      {
-        "label": "Ajustes"
-      },
-      {
-        "label": "Inicio de sesión"
-      }
-    ],
-    "previewIndexes": [
-      0
-    ],
-    "githubUrl": "https://github.com/",
-    "url": "panel-demo.app"
+    "previewIndexes": [0, 1, 2],
+    "videoUrl": "https://www.youtube.com/watch?v=My-61gf2ggU",
+    "githubUrl": "https://github.com/JoelVerastegui/cinemapedia/tree/master"
   }
 ]

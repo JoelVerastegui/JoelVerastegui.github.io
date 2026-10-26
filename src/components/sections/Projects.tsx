@@ -16,11 +16,11 @@ export default function Projects({ projects }: { projects: Project[] }) {
     <section id="proyectos" className="container-x section">
       <div className="projects__head">
         <div className="section-heading">
-          <span className="eyebrow">Trabajo seleccionado</span>
+          <span className="eyebrow">Galería</span>
           <h2 className="display-2">Proyectos</h2>
         </div>
         <div className="filters" role="group" aria-label="Filtrar por plataforma">
-          {FILTERS.map((f) => (
+          {FILTERS.filter((f) => f !== 'Web' || count(f) > 0).map((f) => (
             <button
               key={f}
               type="button"

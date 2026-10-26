@@ -10,7 +10,6 @@ export interface Profile {
   email: string
   linkedinUrl: string
   githubUrl: string
-  cvUrl: string
 }
 
 export interface SkillGroup {

@@ -92,12 +92,10 @@ export default function ProjectDetail({ project: p, prev, next, index, total, on
                 ▶ Ver video de demostración
               </Button>
             )}
-            {p.githubUrl ? (
+            {p.githubUrl && (
               <Button size="lg" href={p.githubUrl} external>
                 Repositorio en GitHub ↗
               </Button>
-            ) : (
-              <span className="text-3 detail__private">Repositorio privado</span>
             )}
           </div>
         </div>
@@ -119,7 +117,7 @@ export default function ProjectDetail({ project: p, prev, next, index, total, on
       <section className="detail-section two-cols">
         <div className="card card--lg">
           <div className="card__head">
-            <h3>Para el usuario</h3>
+            <h3>Características</h3>
             <span className="text-3">Funcionalidades</span>
           </div>
           {p.features.map((t, i) => (
@@ -131,7 +129,7 @@ export default function ProjectDetail({ project: p, prev, next, index, total, on
         </div>
         <div className="card card--lg">
           <div className="card__head">
-            <h3>Bajo el capó</h3>
+            <h3>Tecnologías</h3>
             <span className="text-3">Puntos técnicos</span>
           </div>
           {p.technical.map((t) => (

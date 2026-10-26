@@ -15,9 +15,6 @@ export default function About({ profile }: { profile: Profile }) {
             <a className="text-link" href={profile.linkedinUrl} target="_blank" rel="noreferrer">
               Perfil en LinkedIn ↗
             </a>
-            <a className="text-link" href={profile.cvUrl}>
-              Descargar CV (PDF) ↓
-            </a>
           </div>
         </div>
       </div>

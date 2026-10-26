@@ -33,7 +33,7 @@ export default function ProjectBlock({ project: p, num, total }: Props) {
           <p className="body-lg project-block__desc">{p.description}</p>
           <div className="project-block__actions">
             <Button variant="primary" href={projectHref(p.id)}>
-              Ver caso de estudio →
+              Ver más →
             </Button>
             {p.videoUrl && (
               <Button href={p.videoUrl} external>
