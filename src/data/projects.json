@@ -214,7 +214,7 @@
       { "label": "teslo_shop_7", "image": "teslo_shop_7.webp" },
       { "label": "teslo_shop_8", "image": "teslo_shop_8.webp" }
     ],
-    "previewIndexes": [0, 1, 2],
+    "previewIndexes": [2, 0, 7],
     "videoUrl": "https://www.youtube.com/watch?v=Ktyg9u2cTjM",
     "githubUrl": "https://github.com/JoelVerastegui/teslo_app/tree/master"
   },
@@ -316,7 +316,7 @@
       { "label": "cinemapedia_8", "image": "cinemapedia_8.webp" },
       { "label": "cinemapedia_9", "image": "cinemapedia_9.webp" }
     ],
-    "previewIndexes": [0, 1, 2],
+    "previewIndexes": [5, 0, 7],
     "videoUrl": "https://www.youtube.com/watch?v=My-61gf2ggU",
     "githubUrl": "https://github.com/JoelVerastegui/cinemapedia/tree/master"
   }
