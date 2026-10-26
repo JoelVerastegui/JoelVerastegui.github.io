@@ -1,8 +1,8 @@
+import Icon from '../ui/Icon'
 import type { Profile } from '../../interfaces/profile'
 import type { Project } from '../../interfaces/project'
 import { projectHref } from '../../hooks/useHashRoute'
 import { hueStyle } from '../../utils/hue'
-import { pad2 } from '../../utils/format'
 import Button from '../ui/Button'
 import ProjectIcon from '../ui/ProjectIcon'
 import face from '../../assets/face.png'
@@ -27,16 +27,16 @@ export default function Hero({ profile, projects, onNavigate }: Props) {
           <p className="body-lg hero__intro">{profile.intro}</p>
           <div className="hero__actions">
             <Button variant="primary" size="lg" onClick={() => onNavigate('proyectos')}>
-              Ver proyectos ↓
+              Ver proyectos <Icon name="arrow-down" />
             </Button>
             <Button size="lg" href={profile.linkedinUrl} external>
-              LinkedIn ↗
+              LinkedIn <Icon name="arrow-up-right" />
             </Button>
             <Button size="lg" href={profile.githubUrl} external>
-              GitHub ↗
+              GitHub <Icon name="arrow-up-right" />
             </Button>
             <Button variant="link" size="lg" onClick={() => onNavigate('contacto')}>
-              Contacto →
+              Contacto <Icon name="arrow-right" />
             </Button>
           </div>
         </div>
@@ -46,9 +46,8 @@ export default function Hero({ profile, projects, onNavigate }: Props) {
       </div>
 
       <div className="hero__index">
-        {projects.map((p, i) => (
+        {projects.map((p) => (
           <a key={p.id} className="hero__index-item hue" style={hueStyle(p.hue)} href={projectHref(p.id)}>
-            <span className="hero__index-num">{pad2(i + 1)}</span>
             <ProjectIcon name={p.name} hue={p.hue} icon={p.icon} size={32} radius={9} fontSize={14} />
             <span className="hero__index-text">
               <span className="hero__index-name">{p.name}</span>

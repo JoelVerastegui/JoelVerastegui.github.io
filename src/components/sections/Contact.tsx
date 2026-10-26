@@ -1,3 +1,4 @@
+import Icon from '../ui/Icon'
 import { useState } from 'react'
 import type { Profile } from '../../interfaces/profile'
 import Button from '../ui/Button'
@@ -19,7 +20,6 @@ export default function Contact({ profile }: { profile: Profile }) {
   return (
     <section id="contacto" className="container-x section">
       <div className="contact">
-        <span className="eyebrow">Contacto</span>
         <h2 className="display-2 contact__title">
           Abierto a conversar sobre nuevas oportunidades profesionales.
         </h2>
@@ -27,14 +27,16 @@ export default function Contact({ profile }: { profile: Profile }) {
           <a className="contact__email" href={`mailto:${profile.email}`}>
             {profile.email}
           </a>
-          <Button onClick={copy}>{copied ? 'Copiado ✓' : 'Copiar correo'}</Button>
+          <Button className={copied ? 'btn-x--done' : ''} onClick={copy}>
+            {copied ? <>Copiado <Icon name="check" /></> : 'Copiar correo'}
+          </Button>
         </div>
         <div className="contact__links">
           <Button size="lg" href={profile.linkedinUrl} external>
-            LinkedIn ↗
+            LinkedIn <Icon name="arrow-up-right" />
           </Button>
           <Button size="lg" href={profile.githubUrl} external>
-            GitHub ↗
+            GitHub <Icon name="arrow-up-right" />
           </Button>
         </div>
       </div>

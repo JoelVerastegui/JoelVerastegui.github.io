@@ -14,6 +14,8 @@
   --t2: oklch(0.76 0.006 260);
   --t3: oklch(0.64 0.006 260);
 
+  color-scheme: dark;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --font-display: 'Bricolage Grotesque', sans-serif;
   --font-body: 'Geist', system-ui, sans-serif;
   --font-mono: 'Geist Mono', ui-monospace, monospace;
@@ -104,6 +106,9 @@
 }
 
 /* ───────────────────────── Base ───────────────────────── */
+html {
+  scrollbar-color: oklch(0.3 0.005 260) var(--g900);
+}
 body {
   margin: 0;
   background: var(--g900);
@@ -165,6 +170,7 @@ button {
 .display-3 {
   font-family: var(--font-display);
   font-weight: 600;
+  text-wrap: balance;
 }
 .display-1 {
   font-size: var(--h1);
@@ -212,16 +218,12 @@ button {
 .text-3 {
   font-size: 13px;
   color: var(--t3);
+  font-variant-numeric: tabular-nums;
 }
 .meta-label {
   font-size: 12px;
   font-weight: 500;
   color: var(--t3);
-}
-.eyebrow {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--amber);
 }
 .mono-label {
   font: 500 11px var(--font-mono);
@@ -242,10 +244,61 @@ button {
   padding-bottom: 32px;
 }
 .text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 15px;
   font-weight: 500;
   border-bottom: 1px solid oklch(0.83 0.13 78 / 0.5);
   padding: 10px 0 2px;
+  transition: border-color 0.15s;
+}
+.text-link:hover {
+  border-bottom-color: var(--amber-hover);
+}
+.icon {
+  width: 1em;
+  height: 1em;
+  flex: none;
+  transition: transform 0.25s var(--ease);
+}
+:is(a, button):is(:hover, :focus-visible) .icon--arrow-right {
+  transform: translateX(3px);
+}
+:is(a, button):is(:hover, :focus-visible) .icon--arrow-left {
+  transform: translateX(-3px);
+}
+:is(a, button):is(:hover, :focus-visible) .icon--arrow-up {
+  transform: translateY(-3px);
+}
+:is(a, button):is(:hover, :focus-visible) .icon--arrow-down {
+  transform: translateY(3px);
+}
+:is(a, button):is(:hover, :focus-visible) .icon--arrow-up-right {
+  transform: translate(2px, -2px);
+}
+.icon--check path {
+  stroke-dasharray: 1;
+  animation: draw 0.35s var(--ease) both;
+}
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
 }
 .dot {
   width: 8px;
@@ -259,13 +312,14 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   border: 1px solid var(--line-strong);
   background: transparent;
   color: var(--t1);
   border-radius: 12px;
   font-weight: 500;
   white-space: nowrap;
-  transition: background 0.15s, color 0.15s, transform 0.1s;
+  transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.1s;
 }
 .btn-x:hover {
   background: var(--g800);
@@ -291,14 +345,19 @@ button {
 .btn-x--primary:hover {
   background: var(--amber-hover);
 }
-.btn-x--primary:active {
-  transform: scale(0.98);
-}
 .btn-x--primary.btn-x--md {
   padding: 0 18px;
 }
 .btn-x--primary.btn-x--lg {
   padding: 0 22px;
+}
+.btn-x:active {
+  transform: scale(0.98);
+}
+.btn-x--done,
+.btn-x--done:hover {
+  border-color: oklch(0.83 0.13 78 / 0.5);
+  color: var(--amber);
 }
 .btn-x--link,
 .btn-x--link:hover {
@@ -320,6 +379,10 @@ button {
   background: transparent;
   color: var(--t1);
   font-size: 16px;
+  transition: background 0.15s, transform 0.1s;
+}
+.icon-btn:active {
+  transform: scale(0.96);
 }
 .icon-btn:hover {
   background: var(--g800);
@@ -617,6 +680,7 @@ button {
   font-size: 14px;
   font-weight: 500;
   color: var(--t2);
+  transition: background 0.15s, color 0.15s;
 }
 .nav__link:hover,
 .nav__link--active {
@@ -636,6 +700,10 @@ button {
   color: var(--amber);
   font-size: 14px;
   font-weight: 500;
+  transition: background 0.15s, color 0.15s, transform 0.1s;
+}
+.nav__cta:active {
+  transform: scale(0.97);
 }
 .nav__cta:hover {
   background: var(--amber);
@@ -652,6 +720,7 @@ button {
   font-weight: 500;
 }
 .nav__menu {
+  animation: enter 0.22s var(--ease) both;
   display: none;
   flex-direction: column;
   padding-top: 8px;
@@ -748,15 +817,10 @@ button {
   padding: 18px 16px 18px 0;
   border-bottom: 1px solid var(--line);
   color: var(--t1);
+  transition: background 0.15s;
 }
 .hero__index-item:hover {
   background: oklch(0.185 0.005 260);
-}
-.hero__index-num {
-  width: 20px;
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--t3);
 }
 .hero__index-text {
   display: flex;
@@ -806,8 +870,8 @@ button {
   gap: 6px;
 }
 .filter {
-  height: 40px;
-  padding: 0 14px;
+  height: 44px;
+  padding: 0 16px;
   border-radius: 999px;
   border: 1px solid var(--line-strong);
   background: transparent;
@@ -817,8 +881,17 @@ button {
   display: flex;
   align-items: center;
   gap: 8px;
+  transition: background 0.15s, color 0.15s, transform 0.1s;
 }
-.filter--active {
+.filter:active {
+  transform: scale(0.97);
+}
+.filter:hover {
+  background: var(--g800);
+  color: var(--t1);
+}
+.filter--active,
+.filter--active:hover {
   background: var(--t1);
   border-color: var(--t1);
   color: var(--g900);
@@ -828,6 +901,9 @@ button {
   opacity: 0.7;
 }
 
+.projects__list--enter {
+  animation: enter 0.35s var(--ease) both;
+}
 .project-block {
   border-top: 1px solid var(--line);
   padding: var(--block-pad);
@@ -1004,7 +1080,8 @@ button {
   color: var(--t1);
   border-bottom: 2px solid var(--amber);
   padding-bottom: 4px;
-  word-break: break-all;
+  overflow-wrap: anywhere;
+  transition: color 0.15s;
 }
 .contact__email:hover {
   color: var(--amber);
@@ -1025,6 +1102,10 @@ button {
   padding: 0;
   font-size: 13px;
   color: var(--t2);
+  transition: color 0.15s;
+}
+.footer__top:hover {
+  color: var(--t1);
 }
 @media (max-width: 999.98px) {
   .split {
@@ -1043,6 +1124,7 @@ button {
 /* ───────────────────────── Detalle de proyecto ───────────────────────── */
 .detail {
   padding-top: 24px;
+  animation: fade-in 0.25s ease-out both;
 }
 .detail__bar {
   display: flex;
@@ -1064,6 +1146,9 @@ button {
 }
 .back-link:hover {
   color: var(--t1);
+}
+.back-link {
+  gap: 8px;
 }
 .back-link--accent,
 .back-link--accent:hover {
@@ -1259,8 +1344,17 @@ button {
 .gallery__strip--web .gallery__item {
   width: var(--shot-web);
 }
-.gallery__item:hover {
-  opacity: 0.88;
+.gallery__item .shot {
+  transition: border-color 0.2s;
+}
+.gallery__item:hover .shot {
+  border-color: oklch(1 0 0 / 0.3);
+}
+.gallery__item {
+  transition: transform 0.1s;
+}
+.gallery__item:active {
+  transform: scale(0.985);
 }
 .gallery__caption {
   display: flex;
@@ -1281,6 +1375,7 @@ button {
   border: 1px solid var(--line);
   background: var(--g800);
   color: var(--t1);
+  transition: border-color 0.15s;
 }
 .neighbor:hover {
   border-color: oklch(1 0 0 / 0.2);
@@ -1342,6 +1437,7 @@ button {
 
 /* ───────────────────────── Visor ───────────────────────── */
 .lightbox {
+  animation: fade-in 0.18s ease-out both;
   position: fixed;
   inset: 0;
   z-index: 100;
@@ -1380,11 +1476,21 @@ button {
   border: 1px solid var(--line-strong);
   background: var(--g900);
   font-size: 18px;
+  transition: background 0.15s, transform 0.1s;
+}
+.lightbox__nav:hover {
+  background: var(--g800);
+}
+.lightbox__nav:active {
+  transform: scale(0.96);
 }
 .lightbox__frame {
   max-width: calc(100vw - 150px);
   overflow: hidden;
   border: 1px solid var(--line-strong);
+}
+.lightbox__frame .shot {
+  animation: fade-in 0.2s ease-out both;
 }
 .lightbox__frame--phone {
   height: min(78vh, 760px);
@@ -1403,5 +1509,24 @@ button {
 @media (max-width: 679.98px) {
   .lightbox__stage {
     gap: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+  }
+  .icon {
+    transform: none !important;
+  }
+  .gallery__strip {
+    scroll-behavior: auto;
   }
 }

@@ -1,3 +1,4 @@
+import Icon from '../ui/Icon'
 import { useCallback } from 'react'
 import type { Project } from '../../interfaces/project'
 import { useLightboxKeys } from '../../hooks/useLightboxKeys'
@@ -37,16 +38,16 @@ export default function Lightbox({ project, index, onChange, onClose }: Props) {
       </div>
       <div className="lightbox__stage" onClick={(e) => e.stopPropagation()}>
         <button type="button" className="lightbox__nav" aria-label="Anterior" onClick={prev}>
-          ←
+          <Icon name="arrow-left" />
         </button>
         <div
           className={`lightbox__frame lightbox__frame--${isWeb ? 'web' : 'phone'} hue`}
           style={hueStyle(project.hue)}
         >
-          <Shot shot={shot} index={index} caption={`captura ${pad2(index + 1)} · tamaño completo`} className="shot--fill" />
+          <Shot key={index} shot={shot} index={index} caption={`captura ${pad2(index + 1)} · tamaño completo`} className="shot--fill" />
         </div>
         <button type="button" className="lightbox__nav" aria-label="Siguiente" onClick={next}>
-          →
+          <Icon name="arrow-right" />
         </button>
       </div>
       <span className="lightbox__label">{shot.label}</span>

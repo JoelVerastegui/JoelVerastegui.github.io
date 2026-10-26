@@ -1,3 +1,4 @@
+import Icon from '../ui/Icon'
 import { useState } from 'react'
 import type { Project } from '../../interfaces/project'
 import { HOME_HREF, projectHref } from '../../hooks/useHashRoute'
@@ -22,14 +23,14 @@ function Neighbor({ project, dir }: { project: Project; dir: 'prev' | 'next' }) 
   const icon = <ProjectIcon name={project.name} hue={project.hue} icon={project.icon} size={44} radius={12} fontSize={18} />
   return (
     <a className={`neighbor neighbor--${dir}`} href={projectHref(project.id)}>
-      {dir === 'prev' && <span className="neighbor__arrow">←</span>}
+      {dir === 'prev' && <span className="neighbor__arrow"><Icon name="arrow-left" /></span>}
       {dir === 'prev' && icon}
       <span className="neighbor__text">
         <span className="text-3">{dir === 'prev' ? 'Anterior' : 'Siguiente'}</span>
         <span className="neighbor__name">{project.name}</span>
       </span>
       {dir === 'next' && icon}
-      {dir === 'next' && <span className="neighbor__arrow">→</span>}
+      {dir === 'next' && <span className="neighbor__arrow"><Icon name="arrow-right" /></span>}
     </a>
   )
 }
@@ -50,17 +51,17 @@ export default function ProjectDetail({ project: p, prev, next, index, total, on
     <div className="container-x detail">
       <div className="detail__bar">
         <button type="button" className="back-link" onClick={onBack}>
-          ← Todos los proyectos
+          <Icon name="arrow-left" /> Todos los proyectos
         </button>
         <div className="detail__pager">
           <span className="text-3 detail__counter">
             {pad2(index + 1)} / {pad2(total)}
           </span>
           <a className="icon-btn" href={projectHref(prev.id)} aria-label="Proyecto anterior">
-            ←
+            <Icon name="arrow-left" />
           </a>
           <a className="icon-btn" href={projectHref(next.id)} aria-label="Proyecto siguiente">
-            →
+            <Icon name="arrow-right" />
           </a>
         </div>
       </div>
@@ -89,12 +90,12 @@ export default function ProjectDetail({ project: p, prev, next, index, total, on
           <div className="detail__buttons">
             {p.videoUrl && (
               <Button variant="primary" size="lg" href={p.videoUrl} external>
-                ▶ Ver video de demostración
+                <Icon name="play" /> Ver video de demostración
               </Button>
             )}
             {p.githubUrl && (
               <Button size="lg" href={p.githubUrl} external>
-                Repositorio en GitHub ↗
+                Repositorio en GitHub <Icon name="arrow-up-right" />
               </Button>
             )}
           </div>

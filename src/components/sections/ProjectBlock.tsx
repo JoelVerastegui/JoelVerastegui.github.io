@@ -1,3 +1,4 @@
+import Icon from '../ui/Icon'
 import type { Project } from '../../interfaces/project'
 import { projectHref } from '../../hooks/useHashRoute'
 import Button from '../ui/Button'
@@ -7,19 +8,14 @@ import TechChip from '../ui/TechChip'
 
 interface Props {
   project: Project
-  num: string
-  total: string
 }
 
-export default function ProjectBlock({ project: p, num, total }: Props) {
+export default function ProjectBlock({ project: p }: Props) {
   return (
     <article className={`project-block project-block--${p.layout}`}>
       <div className="project-block__text">
         <div className="project-block__main">
           <div className="project-block__meta">
-            <span>
-              {num} / {total}
-            </span>
             <span className="pill">{p.category}</span>
             <span>{p.platform}</span>
           </div>
@@ -33,16 +29,16 @@ export default function ProjectBlock({ project: p, num, total }: Props) {
           <p className="body-lg project-block__desc">{p.description}</p>
           <div className="project-block__actions">
             <Button variant="primary" href={projectHref(p.id)}>
-              Ver más →
+              Ver más <Icon name="arrow-right" />
             </Button>
             {p.videoUrl && (
               <Button href={p.videoUrl} external>
-                ▶ Demo
+                <Icon name="play" /> Demo
               </Button>
             )}
             {p.githubUrl && (
               <Button href={p.githubUrl} external>
-                GitHub ↗
+                GitHub <Icon name="arrow-up-right" />
               </Button>
             )}
           </div>

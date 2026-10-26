@@ -1,3 +1,4 @@
+import Icon from '../ui/Icon'
 import type { Profile } from '../../interfaces/profile'
 
 export default function About({ profile }: { profile: Profile }) {
@@ -5,7 +6,6 @@ export default function About({ profile }: { profile: Profile }) {
     <section id="perfil" className="container-x section">
       <div className="split split--top-rule">
         <div className="section-heading">
-          <span className="eyebrow">Perfil</span>
           <h2 className="display-2">Sobre mí</h2>
         </div>
         <div className="about__body">
@@ -13,7 +13,7 @@ export default function About({ profile }: { profile: Profile }) {
           <p className="body-lg">{profile.workStyle}</p>
           <div className="about__links">
             <a className="text-link" href={profile.linkedinUrl} target="_blank" rel="noreferrer">
-              Perfil en LinkedIn ↗
+              Perfil en LinkedIn <Icon name="arrow-up-right" />
             </a>
           </div>
         </div>

@@ -1,7 +1,9 @@
+import Icon from '../ui/Icon'
 import { useRef } from 'react'
 import type { Project } from '../../interfaces/project'
 import { hueStyle } from '../../utils/hue'
 import { pad2 } from '../../utils/format'
+import { scrollBehavior } from '../../utils/scroll'
 import Shot from '../ui/Shot'
 
 interface Props {
@@ -14,7 +16,7 @@ export default function Gallery({ project, onOpen }: Props) {
   const isWeb = project.layout === 'web'
   const scroll = (dir: 1 | -1) => {
     const el = strip.current
-    el?.scrollBy({ left: dir * el.clientWidth * 0.8, behavior: 'smooth' })
+    el?.scrollBy({ left: dir * el.clientWidth * 0.8, behavior: scrollBehavior() })
   }
 
   return (
@@ -29,10 +31,10 @@ export default function Gallery({ project, onOpen }: Props) {
         </div>
         <div className="gallery__arrows">
           <button type="button" className="icon-btn" aria-label="Desplazar a la izquierda" onClick={() => scroll(-1)}>
-            ←
+            <Icon name="arrow-left" />
           </button>
           <button type="button" className="icon-btn" aria-label="Desplazar a la derecha" onClick={() => scroll(1)}>
-            →
+            <Icon name="arrow-right" />
           </button>
         </div>
       </div>
