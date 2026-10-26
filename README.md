@@ -15,3 +15,4 @@ Los comandos disponibles están en [package.json](package.json).
 ## Arquitectura
 
 La estructura del file system y la ubicación de los datos de proyectos están en [docs/architecture.md](docs/architecture.md).
+ 
