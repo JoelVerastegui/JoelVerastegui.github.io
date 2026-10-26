@@ -8,6 +8,7 @@ my-portfolio-v2/
 │   └── architecture.md     # Este documento
 ├── src/
 │   ├── assets/             # Iconos, imágenes y estilos globales
+│   │   ├── face.png        # Foto de perfil (Hero)
 │   │   └── projects/       # Imágenes de los proyectos (referenciadas desde el JSON)
 │   ├── components/         # Todos los componentes de la aplicación
 │   │   ├── ui/             # Elementos base (Button, TechChip, PhoneFrame, BrowserFrame, Shot, MediaPanel)

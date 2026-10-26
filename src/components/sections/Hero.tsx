@@ -4,6 +4,7 @@ import { projectHref } from '../../hooks/useHashRoute'
 import { hueStyle } from '../../utils/hue'
 import { pad2 } from '../../utils/format'
 import Button from '../ui/Button'
+import face from '../../assets/face.png'
 
 interface Props {
   profile: Profile
@@ -38,8 +39,8 @@ export default function Hero({ profile, projects, onNavigate }: Props) {
             </Button>
           </div>
         </div>
-        <div className="hero__photo" role="img" aria-label="Fotografía">
-          <span className="mono-label">Fotografía · 280 × 280</span>
+        <div className="hero__photo">
+          <img src={face} alt={`Fotografía de ${profile.name}`} />
         </div>
       </div>
 

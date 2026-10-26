@@ -90,14 +90,14 @@
       }
     ],
     "screenshots": [
-      { "label": "" },
-      { "label": "" },
-      { "label": "" },
-      { "label": "" },
-      { "label": "" },
-      { "label": "" },
-      { "label": "" },
-      { "label": "" }
+      { "label": "ponte_al_dia_1", "image": "ponte_al_dia_1.webp" },
+      { "label": "ponte_al_dia_2", "image": "ponte_al_dia_2.webp" },
+      { "label": "ponte_al_dia_3", "image": "ponte_al_dia_3.webp" },
+      { "label": "ponte_al_dia_4", "image": "ponte_al_dia_4.webp" },
+      { "label": "ponte_al_dia_5", "image": "ponte_al_dia_5.webp" },
+      { "label": "ponte_al_dia_6", "image": "ponte_al_dia_6.webp" },
+      { "label": "ponte_al_dia_7", "image": "ponte_al_dia_7.webp" },
+      { "label": "ponte_al_dia_8", "image": "ponte_al_dia_8.webp" }
     ],
     "previewIndexes": [0, 1, 2],
     "videoUrl": "https://www.youtube.com/watch?v=DdlO9qLc9n0",
@@ -203,14 +203,14 @@
       }
     ],
     "screenshots": [
-      { "label": "" },
-      { "label": "" },
-      { "label": "" },
-      { "label": "" },
-      { "label": "" },
-      { "label": "" },
-      { "label": "" },
-      { "label": "" }
+      { "label": "teslo_shop_1", "image": "teslo_shop_1.webp" },
+      { "label": "teslo_shop_2", "image": "teslo_shop_2.webp" },
+      { "label": "teslo_shop_3", "image": "teslo_shop_3.webp" },
+      { "label": "teslo_shop_4", "image": "teslo_shop_4.webp" },
+      { "label": "teslo_shop_5", "image": "teslo_shop_5.webp" },
+      { "label": "teslo_shop_6", "image": "teslo_shop_6.webp" },
+      { "label": "teslo_shop_7", "image": "teslo_shop_7.webp" },
+      { "label": "teslo_shop_8", "image": "teslo_shop_8.webp" }
     ],
     "previewIndexes": [0, 1, 2],
     "videoUrl": "https://www.youtube.com/watch?v=Ktyg9u2cTjM",
@@ -303,15 +303,15 @@
       }
     ],
     "screenshots": [
-      { "label": "" },
-      { "label": "" },
-      { "label": "" },
-      { "label": "" },
-      { "label": "" },
-      { "label": "" },
-      { "label": "" },
-      { "label": "" },
-      { "label": "" }
+      { "label": "cinemapedia_1", "image": "cinemapedia_1.webp" },
+      { "label": "cinemapedia_2", "image": "cinemapedia_2.webp" },
+      { "label": "cinemapedia_3", "image": "cinemapedia_3.webp" },
+      { "label": "cinemapedia_4", "image": "cinemapedia_4.webp" },
+      { "label": "cinemapedia_5", "image": "cinemapedia_5.webp" },
+      { "label": "cinemapedia_6", "image": "cinemapedia_6.webp" },
+      { "label": "cinemapedia_7", "image": "cinemapedia_7.webp" },
+      { "label": "cinemapedia_8", "image": "cinemapedia_8.webp" },
+      { "label": "cinemapedia_9", "image": "cinemapedia_9.webp" }
     ],
     "previewIndexes": [0, 1, 2],
     "videoUrl": "https://www.youtube.com/watch?v=My-61gf2ggU",
