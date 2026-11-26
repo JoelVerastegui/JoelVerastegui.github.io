@@ -1,6 +1,7 @@
 import Icon from '../ui/Icon'
 import type { Project } from '../../interfaces/project'
 import { projectHref } from '../../hooks/useHashRoute'
+import { externalUrl } from '../../utils/format'
 import Button from '../ui/Button'
 import MediaPanel from '../ui/MediaPanel'
 import ProjectIcon from '../ui/ProjectIcon'
@@ -31,6 +32,11 @@ export default function ProjectBlock({ project: p }: Props) {
             <Button variant="primary" href={projectHref(p.id)}>
               Ver más <Icon name="arrow-right" />
             </Button>
+            {p.url && (
+              <Button href={externalUrl(p.url)} external>
+                Visitar sitio <Icon name="arrow-up-right" />
+              </Button>
+            )}
             {p.videoUrl && (
               <Button href={p.videoUrl} external>
                 <Icon name="play" /> Demo

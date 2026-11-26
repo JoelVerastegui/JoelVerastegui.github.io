@@ -25,6 +25,7 @@
     "items": [
       { "name": ".NET MVC", "abbr": "Nm" },
       { "name": "APIs REST", "abbr": "Rs" },
+      { "name": "Vite", "abbr": "Vi" },
       { "name": "Git y GitHub", "abbr": "Gt" },
       { "name": "GitHub Actions", "abbr": "Ga" },
       { "name": "Azure DevOps", "abbr": "Ad" },

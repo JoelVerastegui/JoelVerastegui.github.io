@@ -2,7 +2,7 @@ import Icon from '../ui/Icon'
 import { useState } from 'react'
 import type { Project } from '../../interfaces/project'
 import { HOME_HREF, projectHref } from '../../hooks/useHashRoute'
-import { pad2 } from '../../utils/format'
+import { externalUrl, pad2 } from '../../utils/format'
 import Button from '../ui/Button'
 import MediaPanel from '../ui/MediaPanel'
 import ProjectIcon from '../ui/ProjectIcon'
@@ -88,6 +88,11 @@ export default function ProjectDetail({ project: p, prev, next, index, total, on
             ))}
           </div>
           <div className="detail__buttons">
+            {p.url && (
+              <Button variant="primary" size="lg" href={externalUrl(p.url)} external>
+                Visitar sitio web <Icon name="arrow-up-right" />
+              </Button>
+            )}
             {p.videoUrl && (
               <Button variant="primary" size="lg" href={p.videoUrl} external>
                 <Icon name="play" /> Ver video de demostración
