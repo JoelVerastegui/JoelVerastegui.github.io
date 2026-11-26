@@ -1,5 +1,115 @@
 [
   {
+    "id": "ton-618",
+    "name": "TON 618",
+    "kind": "Experiencia espacial interactiva",
+    "category": "Web",
+    "platform": "Desktop y móvil",
+    "hue": 55,
+    "icon": "ton_618_icon.webp",
+    "layout": "web",
+    "description": "Recorrido interactivo por TON 618, uno de los agujeros negros más masivos conocidos, narrado con scroll y animaciones.",
+    "highlights": [
+      "Animaciones guiadas por el scroll",
+      "Agujero negro interactivo generado en Canvas",
+      "Adaptada a desktop y móviles"
+    ],
+    "about": [
+      "Experiencia web informativa sobre el agujero negro TON 618, dividida en ocho secciones que explican qué es un cuásar, su anatomía, su escala y la antigüedad de la luz que recibimos de él.",
+      "Es una SPA con una dirección artística unificada, transiciones entre secciones y contenido basado en fuentes científicas."
+    ],
+    "features": [
+      "Mapa por niveles para ubicar TON 618 en el universo",
+      "Anatomía del agujero negro con puntos explorables",
+      "Comparador de escala desde la Tierra hasta TON 618",
+      "Simulación interactiva con control de distancia",
+      "Menú lateral con salto hiperespacial entre secciones"
+    ],
+    "technical": [
+      {
+        "label": "Animación",
+        "value": "CSS scroll-driven animations e IntersectionObserver"
+      },
+      {
+        "label": "Gráficos",
+        "value": "Canvas 2D para el agujero negro interactivo"
+      },
+      {
+        "label": "Navegación",
+        "value": "Rutas por sección con History API, sin librerías"
+      },
+      {
+        "label": "Rendimiento",
+        "value": "Carga bajo demanda de secciones con React.lazy"
+      },
+      {
+        "label": "Accesibilidad",
+        "value": "Soporte para movimiento reducido"
+      },
+      {
+        "label": "Despliegue",
+        "value": "GitHub Actions y GitHub Pages"
+      }
+    ],
+    "stack": [
+      {
+        "name": "React",
+        "abbr": "Re",
+        "group": "Base",
+        "main": true
+      },
+      {
+        "name": "TypeScript",
+        "abbr": "Ts",
+        "group": "Base",
+        "main": true
+      },
+      {
+        "name": "Vite",
+        "abbr": "Vi",
+        "group": "Herramientas"
+      },
+      {
+        "name": "Sass",
+        "abbr": "Sa",
+        "group": "Estilos"
+      },
+      {
+        "name": "Bootstrap",
+        "abbr": "Bs",
+        "group": "Estilos"
+      },
+      {
+        "name": "Canvas API",
+        "abbr": "Cv",
+        "group": "Gráficos"
+      },
+      {
+        "name": "Git",
+        "abbr": "Gt",
+        "group": "Herramientas"
+      },
+      {
+        "name": "GitHub Actions",
+        "abbr": "Ga",
+        "group": "Herramientas"
+      }
+    ],
+    "screenshots": [
+      { "label": "Inicio", "image": "ton_618_1.webp" },
+      { "label": "Exploración", "image": "ton_618_2.webp" },
+      { "label": "Ciencia", "image": "ton_618_3.webp" },
+      { "label": "Escala", "image": "ton_618_4.webp" },
+      { "label": "Tiempo", "image": "ton_618_5.webp" },
+      { "label": "Experimento", "image": "ton_618_6.webp" },
+      { "label": "Evidencia", "image": "ton_618_7.webp" },
+      { "label": "Epílogo", "image": "ton_618_8.webp" }
+    ],
+    "previewIndexes": [0],
+    "githubUrl": "https://github.com/JoelVerastegui/ton-618",
+    "url": "joelverastegui.github.io/ton-618"
+  },
+  {
     "id": "ponte-al-dia",
     "name": "Ponte al Día",
     "kind": "Agenda escolar",
